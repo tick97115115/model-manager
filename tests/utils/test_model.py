@@ -6,6 +6,6 @@ pytestmark = pytest.mark.anyio
 
 async def test_something():
     safesensors_file = join(dirname(dirname(__file__)), 'Ken_Ashcorp_k3n_illus-000008_1205058.safetensors')
-    from model_manager.utils.model import extract_header_from_safesensors
-    result = await extract_header_from_safesensors(safesensors_file)
+    from model_manager.utils.model import async_extract_header_from_safesensors
+    result = await async_extract_header_from_safesensors(safesensors_file)
     assert isinstance(result, str)

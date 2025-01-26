@@ -2,7 +2,7 @@ import struct
 from typing import Any, Coroutine
 from anyio import Path, open_file
 
-async def extract_header_from_safesensors(file: str) -> Coroutine[Any, Any, str]:
+async def async_extract_header_from_safesensors(file: str) -> str:
     async with await open_file(file, 'rb') as f:
         # Read 8 bytes from the file (64-bit = 8 bytes)
         header_length = await f.read(8)
@@ -18,3 +18,9 @@ async def extract_header_from_safesensors(file: str) -> Coroutine[Any, Any, str]
         else:
             raise ValueError("Not enough data to read a 64-bit integer.")
         
+async def async_scan_loras_from_a_folder(folder: str):# -> Coroutine[Any, Any, Path]:
+    path = Path(folder)
+    files = path.glob('**/*.safesensors')
+    async for file in files:
+        pass
+    # 
