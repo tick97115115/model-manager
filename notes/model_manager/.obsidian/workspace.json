@@ -29,9 +29,9 @@
               "state": {
                 "file": "Blueprint.canvas",
                 "viewState": {
-                  "x": -1625.0919958601903,
-                  "y": -8.846300415023848,
-                  "zoom": -0.6211752825079249
+                  "x": 715.9371676509702,
+                  "y": 613.1191115240342,
+                  "zoom": -1.8472127359930066
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -54,22 +54,6 @@
           }
         ],
         "currentTab": 1
-      },
-      {
-        "id": "6b2505d2b9e3597f",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "17e3f5fb5cacae6d",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
-          }
-        ]
       }
     ],
     "direction": "vertical"

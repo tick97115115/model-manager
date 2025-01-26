@@ -14,7 +14,7 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
+# lib/ incompatible with flutter
 lib64/
 parts/
 sdist/
