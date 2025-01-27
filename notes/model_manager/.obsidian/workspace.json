@@ -11,14 +11,17 @@
             "id": "44a48e7b7577ceef",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "Intro.md",
-                "mode": "source",
-                "source": false
+                "file": "Blueprint.canvas",
+                "viewState": {
+                  "x": 1718.3048378290232,
+                  "y": 1335.8339918875658,
+                  "zoom": -1.6464887847290361
+                }
               },
-              "icon": "lucide-file",
-              "title": "Intro"
+              "icon": "lucide-layout-dashboard",
+              "title": "Blueprint"
             }
           }
         ]
@@ -164,8 +167,8 @@
   },
   "active": "44a48e7b7577ceef",
   "lastOpenFiles": [
-    "Blueprint.canvas",
     "Intro.md",
+    "Blueprint.canvas",
     "Local/local models info.md",
     "Local",
     "CivitAI/model.md",
