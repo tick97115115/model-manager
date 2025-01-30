@@ -11,6 +11,7 @@ dependencies = [
     "civitai-api>=1.0.0",
     "anyio>=4.8.0",
     "fastapi[standard]>=0.115.7",
+    "gradio>=5.13.2",
 ]
 requires-python = ">=3.10"
 readme = "README.md"
