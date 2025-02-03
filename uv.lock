@@ -581,6 +581,7 @@ dependencies = [
     { name = "gospeed-api" },
     { name = "gradio" },
     { name = "httpx", extra = ["socks"] },
+    { name = "uvicorn", extra = ["standard"] },
 ]
 
 [package.dev-dependencies]
@@ -596,6 +597,7 @@ requires-dist = [
     { name = "gospeed-api", specifier = ">=2.0.6" },
     { name = "gradio", specifier = ">=5.13.2" },
     { name = "httpx", extras = ["socks"], specifier = ">=0.28.1" },
+    { name = "uvicorn", extras = ["standard"], specifier = ">=0.34.0" },
 ]
 
 [package.metadata.requires-dev]

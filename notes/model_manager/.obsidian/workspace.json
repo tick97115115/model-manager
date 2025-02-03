@@ -11,17 +11,14 @@
             "id": "44a48e7b7577ceef",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Blueprint.canvas",
-                "viewState": {
-                  "x": 1718.3048378290232,
-                  "y": 1335.8339918875658,
-                  "zoom": -1.6464887847290361
-                }
+                "file": "Functions/safesensors file info extraction.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "Blueprint"
+              "icon": "lucide-file",
+              "title": "safesensors file info extraction"
             }
           }
         ]
@@ -43,7 +40,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -167,14 +165,19 @@
   },
   "active": "44a48e7b7577ceef",
   "lastOpenFiles": [
-    "Intro.md",
+    "Functions/Danbooru Tag Dictionary.md",
+    "Functions/safesensors file info extraction.md",
+    "Functions/imgs/Card_Keywords.png",
+    "Functions/imgs",
+    "Pasted image 20250203082728.png",
+    "Tag_Quick_Reference",
     "Blueprint.canvas",
+    "Intro.md",
     "Local/local models info.md",
     "Local",
     "CivitAI/model.md",
     "CivitAI/Model info download.md",
     "CivitAI/Model previews download.md",
-    "Functions/safesensors file info extraction.md",
     "CivitAI",
     "Functions"
   ]
