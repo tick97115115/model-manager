@@ -1,13 +1,10 @@
 import gradio as gr
 
-def greet(name, intensity):
-    return "Hello, " + name + "!" * int(intensity)
+with gr.Blocks() as demo:
+    with gr.Tab("Local"):
+        with gr.Row():
+            search_text = gr.Textbox(label="Search Bar")
+    with gr.Tab("CivitAI"):
+        gr.Text("Tiger")
+    greetings = gr.Text("Hello!")
 
-demo = gr.Interface(
-    fn=greet,
-    inputs=["text", "slider"],
-    outputs=["text"],
-)
-
-if __name__ == "__main__":
-    demo.launch()

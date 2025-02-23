@@ -12,6 +12,9 @@ dependencies = [
     "anyio>=4.8.0",
     "fastapi[standard]>=0.115.7",
     "gradio>=5.13.2",
+    "sqlmodel>=0.0.22",
+    "pydantic-settings>=2.7.1",
+    "jupyter>=1.1.1",
     "uvicorn[standard]>=0.34.0",
 ]
 requires-python = ">=3.10"

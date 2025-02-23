@@ -1,8 +1,9 @@
+import os
 import struct
-from typing import Any, Coroutine
+from typing import Any, Coroutine, List
 from anyio import Path, open_file
 
-async def async_extract_header_from_safesensors(file: str) -> str:
+async def async_extract_header_from_safetensors(file: str) -> str:
     async with await open_file(file, 'rb') as f:
         # Read 8 bytes from the file (64-bit = 8 bytes)
         header_length = await f.read(8)
@@ -17,10 +18,24 @@ async def async_extract_header_from_safesensors(file: str) -> str:
             return header_str
         else:
             raise ValueError("Not enough data to read a 64-bit integer.")
-        
-async def async_scan_loras_from_a_folder(folder: str):# -> Coroutine[Any, Any, Path]:
-    path = Path(folder)
-    files = path.glob('**/*.safesensors')
-    async for file in files:
-        pass
-    # 
+
+def find_files_with_string(directory, search_string) -> List[str]:
+    """
+    Find files in the specified directory that contain the search string in their names.
+    Does not search sub-directories.
+
+    :param directory: The directory to search in.
+    :param search_string: The string to search for in file names.
+    :return: A list of file paths that match the search string.
+    """
+    matching_files: List[str] = []
+    # List all files in the directory (not sub-directories)
+    for filename in os.listdir(directory):
+        # Construct the full file path
+        file_path = os.path.join(directory, filename)
+        # Check if it's a file (not a directory) and contains the search string
+        if os.path.isfile(file_path) and search_string in filename:
+            matching_files.append(file_path)
+    return matching_files
+
+

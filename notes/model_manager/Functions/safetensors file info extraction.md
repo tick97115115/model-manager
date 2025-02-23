@@ -1,4 +1,4 @@
-# Safesensors file info extraction
+# Safetensors file info extraction
 
 ## Useful data:
 
@@ -10,7 +10,7 @@
 
 ## File data structure
 
-See the safesensors python library:
+See the safetensors python library:
 https://github.com/huggingface/safetensors?tab=readme-ov-file#format
 
 ### Format
