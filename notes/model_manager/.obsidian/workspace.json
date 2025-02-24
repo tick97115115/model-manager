@@ -11,14 +11,17 @@
             "id": "44a48e7b7577ceef",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "Logic/Pre-requirements info for program.md",
-                "mode": "source",
-                "source": false
+                "file": "Logic/Program lifecycle.canvas",
+                "viewState": {
+                  "x": -302.66680908203125,
+                  "y": 172,
+                  "zoom": -1
+                }
               },
-              "icon": "lucide-file",
-              "title": "Pre-requirements info for program"
+              "icon": "lucide-layout-dashboard",
+              "title": "Program lifecycle"
             }
           }
         ]
@@ -165,9 +168,11 @@
   },
   "active": "44a48e7b7577ceef",
   "lastOpenFiles": [
+    "Logic/Program lifecycle.md",
+    "Logic/Program lifecycle.canvas",
     "Logic/Main.canvas",
-    "Blueprint.canvas",
     "Logic/Pre-requirements info for program.md",
+    "Blueprint.canvas",
     "Intro.md",
     "Pasted image 20250203082728.png",
     "Functions/Danbooru Tag Dictionary.md",
