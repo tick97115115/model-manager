@@ -33,10 +33,6 @@ class LoraFolderNotFound(Exception):
         return self.msg
 
 def load_settings():
-    # if file doest exists
-    if not exists(path=config_file):
-        raise FileNotFoundError()
-    
     # if file content broken makes it un deserializable
     try:
         with open(config_file, 'r', encoding='utf-8') as f:
@@ -58,8 +54,41 @@ def check_settings(settings: Settings):
         raise DatabaseNotFound(msg="database doesn't exists")
 
 def save_settings(settings: Settings):
-    check_settings(settings)
 
     with open(config_file, 'w', encoding="utf-8") as f:
         f.write(settings.model_dump_json(indent=2))
 
+def init() -> Settings:
+    initial_check_pass: bool = False
+    settings: Settings
+
+    while not initial_check_pass:
+        # check if config file exists
+        if not exists(config_file):
+            print("Config file not found, creating new one.")
+            settings = Settings()
+            save_settings(settings)
+            continue
+
+        # check if settings are correct
+        try:
+            settings = load_settings()
+            check_settings(settings)
+        except LoadSettingsError:
+            settings = Settings()
+            save_settings(settings)
+            print("Load settings failed, replace \".settings.json\" with default values.")
+            input("Please edit \".settings.json\" then Press enter to continue...")
+            continue
+        except LoraFolderNotFound:
+            print("Lora folder not found")
+            input("please check \"lora_folder\" value in \".settings.json\" then Press enter to continue...")
+            continue
+        except DatabaseNotFound:
+            print("Database not found")
+            input("please check \"db_uri\" value in \".settings.json\" then Press enter to continue...")
+            continue
+
+        initial_check_pass = True
+    
+    return settings
