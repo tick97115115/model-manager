@@ -3,7 +3,7 @@ from pydantic import Field
 from os.path import join, dirname, exists
 import json
 
-config_file = join(dirname(__file__), '.settings.json')
+settings_file = join(dirname(__file__), '.settings.json')
 
 class Settings(BaseSettings):
     db_uri: str = Field(default=join(dirname(__file__), 'db.sqlite3'))
@@ -35,7 +35,7 @@ class LoraFolderNotFound(Exception):
 def load_settings():
     # if file content broken makes it un deserializable
     try:
-        with open(config_file, 'r', encoding='utf-8') as f:
+        with open(settings_file, 'r', encoding='utf-8') as f:
             f_str = f.read()
             data = json.loads(f_str)
             # if settings option value (like lora_folder) can't be found
@@ -54,8 +54,7 @@ def check_settings(settings: Settings):
         raise DatabaseNotFound(msg="database doesn't exists")
 
 def save_settings(settings: Settings):
-
-    with open(config_file, 'w', encoding="utf-8") as f:
+    with open(settings_file, 'w', encoding="utf-8") as f:
         f.write(settings.model_dump_json(indent=2))
 
 def init() -> Settings:
@@ -63,9 +62,9 @@ def init() -> Settings:
     settings: Settings
 
     while not initial_check_pass:
-        # check if config file exists
-        if not exists(config_file):
-            print("Config file not found, creating new one.")
+        # check if settings file exists
+        if not exists(settings_file):
+            print("settings file not found, creating new one.")
             settings = Settings()
             save_settings(settings)
             continue

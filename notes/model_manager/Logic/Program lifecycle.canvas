@@ -1,11 +1,12 @@
 {
 	"nodes":[
-		{"id":"dee05bcd5d3d949e","x":-1440,"y":-200,"width":1465,"height":660,"type":"group","label":"Validation Stage"},
+		{"id":"dee05bcd5d3d949e","type":"group","x":-1440,"y":-200,"width":1465,"height":660,"label":"Validation Stage"},
 		{"id":"1f24303c698966f7","type":"text","text":"validate settings\n```\nwhile valid_setting:\n    xxx\n```","x":-245,"y":80,"width":250,"height":140},
 		{"id":"07210ac6822c3e30","type":"text","text":"Load settings","x":-245,"y":-180,"width":250,"height":60},
 		{"id":"33dc7199b40cf4e7","type":"text","text":"input(\"Press the Enter key to continue: \")","x":-760,"y":120,"width":250,"height":60},
 		{"id":"0d208fefc81991b0","type":"text","text":"user press enter","x":-1420,"y":120,"width":250,"height":60},
-		{"id":"3c0d14b4d4ab2787","type":"text","text":"Go to initial stage","x":-245,"y":380,"width":250,"height":60}
+		{"id":"3c0d14b4d4ab2787","type":"text","text":"Go to initial stage","x":-245,"y":380,"width":250,"height":60},
+		{"id":"091bee77f77ed984","x":-316,"y":591,"width":250,"height":60,"type":"text","text":"initial database"}
 	],
 	"edges":[
 		{"id":"01bf164c8021377a","fromNode":"07210ac6822c3e30","fromSide":"bottom","toNode":"1f24303c698966f7","toSide":"top"},

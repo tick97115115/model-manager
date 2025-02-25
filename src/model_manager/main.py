@@ -1,15 +1,12 @@
 from fastapi import FastAPI
-from model_manager.config import Settings, check_settings, load_settings
+from model_manager.settings import Settings, check_settings, load_settings
 import gradio as gr
 from model_manager.gradio_ui import demo
 import uvicorn
-from .config import init
+from .settings import init
 
 app = FastAPI()
 app = gr.mount_gradio_app(app, demo, '/gradio')
-
-def init():
-    pass
 
 @app.get('/test')
 async def test():
