@@ -1,7 +1,7 @@
 import pytest
 from sqlmodel import create_engine, SQLModel, Session
 from sqlmodel.pool import StaticPool
-from model_manager.db.local_models import LocalLora
+from model_manager.db.tables import LocalLora
 
 # This is the same as using the @pytest.mark.anyio on all test functions in the module
 pytestmark = pytest.mark.anyio
