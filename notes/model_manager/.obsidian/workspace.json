@@ -13,15 +13,15 @@
             "state": {
               "type": "canvas",
               "state": {
-                "file": "Logic/Program lifecycle.canvas",
+                "file": "Logic/tag_system/tag_system_design.canvas",
                 "viewState": {
-                  "x": 267.21958139775336,
-                  "y": 648.0178534516749,
-                  "zoom": -1.1102230246251565e-16
+                  "x": 492.90000000000015,
+                  "y": 13.950000000000003,
+                  "zoom": 0
                 }
               },
               "icon": "lucide-layout-dashboard",
-              "title": "Program lifecycle"
+              "title": "tag_system_design"
             }
           }
         ]
@@ -168,16 +168,18 @@
   },
   "active": "44a48e7b7577ceef",
   "lastOpenFiles": [
-    "Logic/Program lifecycle.md",
+    "Functions/safetensors file info extraction.md",
+    "Logic/tag_system/tag_system_design.canvas",
+    "Logic/tag_system",
+    "Functions/Danbooru Tag Dictionary.md",
     "Logic/Program lifecycle.canvas",
+    "Logic/Program lifecycle.md",
     "Logic/Main.canvas",
     "Logic/Pre-requirements info for program.md",
     "Blueprint.canvas",
     "Intro.md",
     "Pasted image 20250203082728.png",
-    "Functions/Danbooru Tag Dictionary.md",
     "Logic",
-    "Functions/safetensors file info extraction.md",
     "Functions/imgs/Card_Keywords.png",
     "CivitAI/model.md",
     "Functions/imgs",
